@@ -37,13 +37,12 @@ int lonelyinteger(vector<int> a) {
 int main()
 {
     string n_temp;
-    cin >> n_temp;
+    getline(cin, n_temp);
 
     int n = stoi(ltrim(rtrim(n_temp)));
     
     string a_temp_temp;
-    cin >> a_temp_temp;
-
+    getline(cin, a_temp_temp);
     vector<string> a_temp = split(rtrim(a_temp_temp));
     
     vector<int> a(n);
@@ -89,7 +88,6 @@ vector<string> split(const string &str) {
     string::size_type end = 0;
     while ((end = str.find(" ", start)) != string::npos) {
         tokens.push_back(str.substr(start, end - start));
-
         start = end + 1;
     }
     tokens.push_back(str.substr(start));
